@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10%;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+form #username,#password, #email,#department,#deadline,#assigned_to,#title{
+    width: 95%;
+}
+
+.Login_button{
+    text-decoration: none;
+
+    width: 100px;
+    height: 30px;
+}
+.Login_button:hover{
+    color: red;
+}
