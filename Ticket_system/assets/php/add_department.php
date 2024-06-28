@@ -7,20 +7,17 @@ if ($_SESSION['role'] != 'admin') {
     exit;
 }
 
-// Handle form submission
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $newDepartment = $_POST['department']; // Fetch the new department value from the form
+    $newDepartment = $_POST['department']; 
 
-    // Validate and sanitize input (optional step)
 
-    // Check if department already exists in departments table
     $check_query = "SELECT * FROM departments WHERE name = '$newDepartment'";
     $check_result = $conn->query($check_query);
 
     if ($check_result->num_rows > 0) {
         echo "Department already exists.";
     } else {
-        // Insert new department into departments table
         $insert_query = "INSERT INTO departments (name) VALUES ('$newDepartment')";
 
         if ($conn->query($insert_query) === TRUE) {

@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     exit;
 }
 
-// Fetch all tickets for admin view
+//pobieranie danych z ticketów
 $sql = "SELECT * FROM tickets";
 $result = $conn->query($sql);
 ?>

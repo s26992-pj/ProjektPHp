@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment_id'])) {
     $commentId = intval($_POST['comment_id']);
 
-    // Perform delete operation on comments table
+
     $sql = "DELETE FROM comments WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $commentId);
